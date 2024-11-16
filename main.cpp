@@ -21,20 +21,19 @@ vector <string> func1(string a)
     return myVector;
 }
 
-void func2(vector <string> b)
+void func2()
 {
-    cout << b[0] << endl;
-    cout << b[1] << endl;
+
 }
+
 void func3()
 {
 
 }
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    func1("\\Users\\»горь\\Documents\\CBfiles\\text.txt");
-    func2(func1("\\Users\\»горь\\Documents\\CBfiles\\text.txt"));
+    func1(); // ¬веди путь к файлу в эту функцию
+    func2();
     func3();
     return 0;
 }
