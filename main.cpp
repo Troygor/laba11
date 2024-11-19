@@ -4,9 +4,21 @@
 
 using namespace std;
 
-void func1()
+vector <string> func1(string a)
 {
-
+    fstream myFile;
+    vector <string> myVector;
+    string str;
+    myFile.open(a);
+    if(myFile.is_open())
+    {
+        while(!myFile.eof())
+        {
+            getline(myFile, str);
+            myVector.push_back(str);
+        }
+    }
+    return myVector;
 }
 
 void func2(const vector <string> &vec)
@@ -36,7 +48,7 @@ void func3(const vector <string> &vec, const string &nameFile)
 int main()
 {
     func1();
-    func2(); // напишите сюда название вектора
-    func3(); // напишитеназвание вектора и файла который нужно создать
+    func2();
+    func3();
     return 0;
 }
