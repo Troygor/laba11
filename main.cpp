@@ -35,8 +35,12 @@ void func3(const vector <string> &vec, const string &nameFile)
 }
 int main()
 {
+    /*vector <string> vector1;
+    vector1.push_back("first");
+    vector1.push_back("second");
+    vector1.push_back("third");*/
     func1();
-    func2();
-    func3();
+    func2(); // напишите сюда название вектора
+    func3(); // напишитеназвание вектора и файла который нужно создать
     return 0;
 }
