@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ void func1()
 
 }
 
-void func2(const vector <auto> &vec)
+void func2(const vector <string> &vec)
 {
     for (auto x: vec)
     {
@@ -17,9 +18,21 @@ void func2(const vector <auto> &vec)
     }
 }
 
-void func3()
+void func3(const vector <string> &vec, const string &nameFile)
 {
+    ofstream outVector(nameFile);
+    if (!outVector)
+    {
+        cout << "Error" << endl;
+        return;
+    }
 
+    for (const auto &stroci: vec)
+    {
+        outVector << stroci << endl;
+    }
+
+    outVector.close();
 }
 int main()
 {
